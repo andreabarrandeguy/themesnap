@@ -472,6 +472,20 @@ body.dark-mode .greyButton:hover {
     font-size: 0.8rem;
 }
 
+.formContainer p a {
+    text-decoration: none;
+}
+
+/*Login*/
+.login h1 {
+    margin: 0;
+}
+
+.login h2 {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
 /*Media Queries*/
 /*Tablets*/
 @media (max-width: 850px) {
