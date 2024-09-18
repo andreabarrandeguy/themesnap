@@ -530,6 +530,51 @@ body.dark-mode .active {
     height: 85vh;
 }
 
+.mainNoPhoto form input {
+    display: none;
+}
+
+.shutter-button {
+    display: inline-block;
+    width: 80px; 
+    height: 80px; 
+    background-color: var(--yellow); 
+    border: 3px solid var(--black);
+    border-radius: 50%; 
+    animation: shadows 5s infinite;
+    cursor: pointer; 
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+body.dark-mode .shutter-button {
+    background-color: var(--purple);
+}
+
+@keyframes shadows {
+    0% {
+      box-shadow: var(--purple) 0 0 40px;
+    }
+    50% {
+      box-shadow: var(--yellow) 0 0 40px;
+    }
+    75% {
+      box-shadow: var(--yellowhover) 0 0 40px;
+    }
+    100% {
+      box-shadow: var(--purplehover) 0 0 40px;
+    }
+  }
+
+.shutter-button:hover {
+    background-color: var(--yellowhover);
+}
+
+body.dark-mode .shutter-button:hover {
+    background-color: var(--purplehover);
+}
+
 /*Media Queries*/
 /*Tablets*/
 @media (max-width: 850px) {
