@@ -341,16 +341,20 @@ body.dark-mode .formContainer {
 }
 
 .formContainer input {
-    width: -webkit-fill-available;
     border-radius: 4px;
-    height: 1.5rem;
+    width: 97%;
+    margin: 5px;
+    text-align: center;
     border: var(--darkgrey) solid 1px;
-    padding-left: 5px;
+    transition: background-color 0.3s ease;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 5px 0px;
 }
 
 .formContainer input:focus {
-    border: 3px solid var(--purple);
     outline: none;
+    border: 3px solid var(--purple);
 }
 
 body.dark-mode .formContainer input:focus {
@@ -371,8 +375,8 @@ body.dark-mode .formContainer input:focus {
 
 .password-container button {
     position: absolute;
-    right: 0.5rem;
-    top: 15%;
+    right: 1rem;
+    top: 27%;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -381,10 +385,12 @@ body.dark-mode .formContainer input:focus {
 
 .password-container .fa-eye {
     color: #666;
+    font-size: 1.2rem;
 }
 
 .password-container .fa-eye-slash {
     color: #666;
+    font-size: 1.2rem;
 }
 
 #suscribeCheckbox {
