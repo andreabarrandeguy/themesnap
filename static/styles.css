@@ -407,6 +407,8 @@ body.dark-mode .formContainer input:focus {
 }
 
 .buttonprimary2 {
+    display: flex;
+    justify-content: center;
     background-color: var(--purple);
     border-radius: 8px;
     margin: .25rem .125rem;
@@ -416,7 +418,6 @@ body.dark-mode .formContainer input:focus {
     font-weight: 700;
     font-size: 1rem;
     border: none;
-    width: 100%;
     transition: background-color 0.3s ease;
 }
 
@@ -495,6 +496,38 @@ body.dark-mode .greyButton:hover {
 .login h2 {
     margin-bottom: 20px;
     font-size: 1.1rem;
+}
+
+/*Home - Theme not completed*/
+footer {
+    bottom: 10px;
+    position: absolute;
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-evenly;
+}
+
+footer i {
+    font-size: 2rem;
+}
+
+.active {
+    color: var(--purple);
+}
+
+body.dark-mode .active {
+    color: var(--yellow);
+}
+
+.mainNoPhoto {
+    top: 65px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: -webkit-fill-available;
+    height: 85vh;
 }
 
 /*Media Queries*/
@@ -580,6 +613,12 @@ body.dark-mode .greyButton:hover {
     }
     .formContainer h1 {
         font-size: 2rem;
+    }
+    .mainNoPhoto h1 {
+        font-size: 2rem;
+    }
+    .mainNoPhoto h2 {
+        font-size: 1.2rem;
     }
    
 }

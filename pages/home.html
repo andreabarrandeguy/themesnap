@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="https://kit.fontawesome.com/858b52eeaa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <title>ThemeSnap</title>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark-mode') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body class="noScroll">
+    <header>
+        <nav>
+            <a href="../index.html">
+                <img>
+            </a>
+            <div>
+                <i class="fa-regular fa-lightbulb"></i>
+                <div class="toggle-switch">
+                    <input class="toggle-input" id="toggle" type="checkbox">
+                    <label class="toggle-label" for="toggle" id="toggle2"></label>
+                </div>
+                <i class="fa-regular fa-moon"></i>
+            </div>
+            
+        </nav>
+    </header>
+    <main class="mainNoPhoto">
+        <div>
+
+            <h1 class="highlightText">HOME</h1>
+        </div>
+    </main>
+    <footer>
+        <div><i class="fa-solid fa-house active"></i></div>
+        <div><i class="fa-solid fa-compass"></i></div>
+        <div><i class="fa-solid fa-user"></i></div>
+    </footer>
+    <script src="../static/js.js"></script>
+</body>
+</html>

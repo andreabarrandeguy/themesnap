@@ -64,3 +64,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+//Photo submission
+document.getElementById('upload').addEventListener('change', function () {
+    // Check if a file was selected
+    if (this.files.length > 0) {
+        // Submit the form
+        document.getElementById('photoForm').submit();
+    }
+});
