@@ -32,7 +32,9 @@ body.dark-mode {
 header {
     position: fixed;
     top: 0;
-    width: 99dvw;
+    z-index: 1;
+    width: -webkit-fill-available;
+    padding-right: 1vw;
 }
 
 nav {
@@ -500,27 +502,6 @@ body.dark-mode .greyButton:hover {
 }
 
 /*Home - Theme not completed*/
-footer {
-    bottom: 10px;
-    position: absolute;
-    display: flex;
-    width: -webkit-fill-available;
-    justify-content: space-evenly;
-}
-
-footer a {
-    font-size: 2rem;
-    text-decoration: none;
-}
-
-.active {
-    color: var(--purple);
-}
-
-body.dark-mode .active {
-    color: var(--yellow);
-}
-
 .mainNoPhoto {
     top: 65px;
     position: absolute;
@@ -577,6 +558,126 @@ body.dark-mode .shutter-button:hover {
     background-color: var(--purplehover);
 }
 
+footer {
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    width: -webkit-fill-available;
+    justify-content: space-evenly;
+    background-color: var(--white);
+    transition: background-color 0.3s ease;
+    padding: 15px 0;
+}
+
+body.dark-mode footer {
+    background-color: var(--black);
+    transition: background-color 0.3s ease;
+}
+
+footer a {
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.active {
+    color: var(--purple);
+}
+
+body.dark-mode .active {
+    color: var(--yellow);
+}
+
+/*Home - Theme completed*/
+.headerApp {
+    background-color: var(--white);
+}
+
+body.dark-mode .headerApp {
+    background-color: var(--black);
+}
+.mainPhoto {
+    top: 120px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: -webkit-fill-available;
+}
+
+.mainPhoto > div:last-child {
+    margin-bottom: 60px;
+}
+
+.photoContainer {
+    margin-bottom: 15px;
+}
+
+.mainPhoto h1 {
+    position: fixed;
+    top: 60px;
+    padding-bottom: 10px;
+    z-index: 1;
+    background-color: var(--white);
+    width: -webkit-fill-available;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .mainPhoto h1 {
+    background-color: var(--black);
+    transition: background-color 0.3s ease;
+}
+
+.photoContainer p {
+    font-weight: 500;
+}
+
+.photoContainer > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.photo {
+    position: relative; 
+    display: inline-block; 
+}
+
+.photo img {
+    width: 100%;
+    display: block; 
+}
+
+.bookmark-toggle {
+    display: none; /* Hide the checkbox */
+}
+
+.bookmark-icon {
+    position: absolute; /* Position the icon absolutely */
+    bottom: 5px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
+    font-size: 24px; /* Adjust size as needed */
+    color: var(--yellow); /* Change color for visibility */
+    border-radius: 50%; /* Optional: round background */
+    transition: transform 0.3s; /* Optional: smooth hover effect */
+}
+
+body.dark-mode .bookmark-icon {
+    color: var(--purple);
+}
+
+.bookmark-icon::before {
+    font-family: "Font Awesome 5 Free"; /* Ensure to include Font Awesome */
+    content: "\f02e"; /* Unicode for fa-bookmark */
+    font-weight: 400; /* Regular weight */
+}
+
+.bookmark-toggle:checked + .bookmark-icon::before {
+    content: "\f02e"; /* Unicode for fa-solid bookmark */
+    font-weight: 900; /* Solid weight */
+}
+
 /*Media Queries*/
 /*Tablets*/
 @media (max-width: 850px) {
@@ -627,6 +728,9 @@ body.dark-mode .shutter-button:hover {
         flex-direction: column;
         width: 80%;
         max-width: 400px;
+    }
+    .mainPhoto h1 {
+        top: 64px;
     }
 }
 
