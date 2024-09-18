@@ -305,10 +305,18 @@ body.dark-mode .feature {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--yellowhover);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .mainForm {
+    background-color: var(--purplehover);
+    transition: background-color 0.3s ease;
 }
 
 .formContainer {
     background-color: var(--white);
+    width: 375px;
     padding: 25px;
     border-radius: 8px;
     box-shadow: 10px 10px 15px var(--shadow);
@@ -324,7 +332,7 @@ body.dark-mode .formContainer {
     margin-bottom: 20px;
 }
 
-.formContainer div {
+.formContainer form > div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -415,6 +423,55 @@ body.dark-mode .buttonprimary2:hover {
     background-color: var(--yellowhover);
 }
 
+#divider-wrapper {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin: 0;
+    padding: 24px 0 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#divider-wrapper:before, #divider-wrapper:after {
+    content: "";
+    border-bottom: 1px solid #c2c8d0;
+    flex: 1 0 auto;
+    margin: 0;
+}
+
+.divider {
+    margin: 0px 5px;
+}
+
+.greyButton {
+    display: block;
+    background-color: var(--darkgrey);
+    border-radius: 8px;
+    margin: 24px .125rem;
+    padding: 0.50rem 0.75rem;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    width: -webkit-fill-available;
+    transition: background-color 0.3s ease;
+}
+
+.greyButton:hover {
+    background-color: var(--purplehover);
+    cursor: pointer;
+}
+
+body.dark-mode .greyButton:hover {
+    background-color: var(--yellowhover);
+}
+
+.formContainer p {
+    font-size: 0.8rem;
+}
+
 /*Media Queries*/
 /*Tablets*/
 @media (max-width: 850px) {
@@ -484,6 +541,20 @@ body.dark-mode .buttonprimary2:hover {
     }
     .feature i {
         font-size: 1.75rem;
+    }
+    .mainForm {
+        background-color: var(--white);
+        transition: background-color 0.3s ease;
+    }
+    body.dark-mode .mainForm {
+        background-color: var(--black);
+        transition: background-color 0.3s ease;
+    }
+    .formContainer {
+        box-shadow: none;
+    }
+    .formContainer h1 {
+        font-size: 2rem;
     }
 }
 
