@@ -507,8 +507,9 @@ footer {
     justify-content: space-evenly;
 }
 
-footer i {
+footer a {
     font-size: 2rem;
+    text-decoration: none;
 }
 
 .active {
@@ -527,7 +528,7 @@ body.dark-mode .active {
     align-items: center;
     justify-content: space-around;
     width: -webkit-fill-available;
-    height: 85vh;
+    height: 80vh;
 }
 
 .mainNoPhoto form input {
