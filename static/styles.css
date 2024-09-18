@@ -419,6 +419,7 @@ body.dark-mode .formContainer input:focus {
     font-size: 1rem;
     border: none;
     transition: background-color 0.3s ease;
+    width: -webkit-fill-available;
 }
 
 .buttonprimary2:hover {
