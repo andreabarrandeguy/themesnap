@@ -307,7 +307,7 @@ body.dark-mode .feature {
 
 .mainForm {
     height: 95dvh;
-    margin-top: 5vh;
+    padding-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -582,6 +582,7 @@ body.dark-mode .greyButton:hover {
     .formContainer h1 {
         font-size: 2rem;
     }
+   
 }
 
 
