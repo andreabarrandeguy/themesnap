@@ -19,48 +19,50 @@
     </script>
 </head>
 <body class="noScroll">
-    <header>
-        <nav>
-            <a href="../index.html">
-                <img>
-            </a>
-            <div>
-                <i class="fa-regular fa-lightbulb"></i>
-                <div class="toggle-switch">
-                    <input class="toggle-input" id="toggle" type="checkbox">
-                    <label class="toggle-label" for="toggle" id="toggle2"></label>
+    <div class="bodyApp">
+        <header class="headerApp">
+            <nav>
+                <a href="../index.html">
+                    <img>
+                </a>
+                <div>
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div class="toggle-switch">
+                        <input class="toggle-input" id="toggle" type="checkbox">
+                        <label class="toggle-label" for="toggle" id="toggle2"></label>
+                    </div>
+                    <i class="fa-regular fa-moon"></i>
                 </div>
-                <i class="fa-regular fa-moon"></i>
+                
+            </nav>
+        </header>
+        <main class="mainNoPhoto">
+            <div>
+                <h2>Today's theme is</h2>
+                <h1 class="highlightText">Green</h1>
             </div>
-            
-        </nav>
-    </header>
-    <main class="mainNoPhoto">
-        <div>
-            <h2>Today's theme is</h2>
-            <h1 class="highlightText">Green</h1>
-        </div>
-        <div>
-            <p>You haven’t taken today’s theme photo.</p>
-            <p>Snap below!</p>
-        </div>
-        <form id="photoForm" action="home.html" enctype="multipart/form-data">
-            <input
-                id="upload"
-                type="file"
-                accept="image/*"
-                capture="environment"
-                required
-                onchange="this.form.submit();"
-            />
-            <label for="upload" class="shutter-button"></label>
-        </form>        
-    </main>
-    <footer>
-        <div><a class="fa-solid fa-house active"></a></div>
-        <div><a href="./explore.html" class="fa-solid fa-compass"></a></div>
-        <div><a class="fa-solid fa-user"></a></div>
-    </footer>
+            <div>
+                <p>You haven’t taken today’s theme photo.</p>
+                <p>Snap below!</p>
+            </div>
+            <form id="photoForm" action="home.html" enctype="multipart/form-data">
+                <input
+                    id="upload"
+                    type="file"
+                    accept="image/*"
+                    capture="environment"
+                    required
+                    onchange="this.form.submit();"
+                />
+                <label for="upload" class="shutter-button"></label>
+            </form>        
+        </main>
+        <footer>
+            <div><a class="fa-solid fa-house active"></a></div>
+            <div><a href="./explore.html" class="fa-solid fa-compass"></a></div>
+            <div><a class="fa-solid fa-user"></a></div>
+        </footer>
+    </div>
     <script src="../static/js.js"></script>
 </body>
 </html>
