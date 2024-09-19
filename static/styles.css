@@ -591,10 +591,12 @@ body.dark-mode .active {
 /*Home - Theme completed*/
 .headerApp {
     background-color: var(--white);
+    transition: background-color 0.3s ease;
 }
 
 body.dark-mode .headerApp {
     background-color: var(--black);
+    transition: background-color 0.3s ease;
 }
 .mainPhoto {
     top: 120px;
@@ -667,13 +669,13 @@ body.dark-mode .bookmark-icon {
 }
 
 .bookmark-icon::before {
-    font-family: "Font Awesome 5 Free"; /* Ensure to include Font Awesome */
-    content: "\f02e"; /* Unicode for fa-bookmark */
-    font-weight: 400; /* Regular weight */
+    font-family: "Font Awesome 5 Free"; 
+    content: "\f02e"; 
+    font-weight: 400; 
 }
 
 .bookmark-toggle:checked + .bookmark-icon::before {
-    content: "\f02e"; /* Unicode for fa-solid bookmark */
+    content: "\f02e"; 
     font-weight: 900; /* Solid weight */
 }
 
