@@ -1,14 +1,17 @@
 :root {
     --white: #F2F2F2;
     --black: #0A0A0A;
+    --shadow: rgba(10, 10, 10, 0.5);
     --purple: #4D5FA8;
+    --purpleshadow: rgba(77, 95, 168, 0.75);
     --purplehover: #434f8a;
     --yellow: #D0A616;
     --yellowhover: #bd8811;
+    --yellowshadow: rgba(208, 166, 22, 0.75);
     --lightgrey: #EBEBEB;
     --darkgrey: #AEAEAE;
     --darkgrey2: #141414;
-    --shadow: rgba(10, 10, 10, 0.5);
+
 }
 
 * {
@@ -691,17 +694,21 @@ body.dark-mode .bookmark-icon {
 
 .popup {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    display: none; /* Initially hidden */
-    transition: opacity 0.5s ease;
-    z-index: 3; /* Ensure it appears above other elements */
+    background-color: var(--yellowshadow);
+    color: var(--black);
+    font-weight: 600;
+    padding: 20px 25px;
+    border-radius: 4px;
+    display: none;
+    transition: opacity 1s ease;
+    z-index: 3;
+    top: 50%;
 }
 
+body.dark-mode .popup {
+    background-color: var(--purpleshadow);
+    color: var(--white);
+}
 
 .homeEnd {
     height: 160px;
