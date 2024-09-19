@@ -510,7 +510,7 @@ body.dark-mode .greyButton:hover {
     align-items: center;
     justify-content: space-around;
     width: -webkit-fill-available;
-    height: 80vh;
+    height: 70vh;
 }
 
 .mainNoPhoto form input {
@@ -518,6 +518,7 @@ body.dark-mode .greyButton:hover {
 }
 
 .shutter-button {
+    z-index: 2;
     display: inline-block;
     width: 80px; 
     height: 80px; 
@@ -654,13 +655,11 @@ body.dark-mode .mainPhoto h1 {
 }
 
 .bookmark-icon {
-    position: absolute; /* Position the icon absolutely */
-    bottom: 5px; /* Distance from the bottom */
-    right: 10px; /* Distance from the right */
-    font-size: 24px; /* Adjust size as needed */
-    color: var(--yellow); /* Change color for visibility */
-    border-radius: 50%; /* Optional: round background */
-    transition: transform 0.3s; /* Optional: smooth hover effect */
+    position: absolute; 
+    bottom: 10px; 
+    right: 15px; 
+    font-size: 1.8rem; 
+    color: var(--yellow); 
 }
 
 body.dark-mode .bookmark-icon {
