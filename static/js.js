@@ -42,3 +42,22 @@ modeToggle.addEventListener('click', toggleDarkMode);
 
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', loadTheme);
+
+//"Go to top" button
+window.addEventListener('scroll', function () {
+    const scrollToTopButton = document.getElementById('scrollToTop');
+    const featuresSection = document.querySelector('.featuresSection');
+
+    if (featuresSection) {
+        const featuresPosition = featuresSection.getBoundingClientRect().top;
+
+        // Show the button if the user has scrolled into the features section or lower
+        if (window.scrollY > featuresSection.offsetTop) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
+        }
+    }
+});
+
+

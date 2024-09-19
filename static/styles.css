@@ -38,6 +38,7 @@ header {
     z-index: 1;
     width: -webkit-fill-available;
     padding-right: 1vw;
+    backdrop-filter: blur(10px);
 }
 
 nav {
@@ -322,8 +323,6 @@ body.dark-mode .feature {
     width: 100%;
   }
 
-  
-  
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
@@ -339,6 +338,33 @@ body.dark-mode .feature {
       max-width: 100%;
     }
   }
+  
+  #scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--purple); 
+    color: var(--white); 
+    padding: 8px 15px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: opacity 0.3s;
+    z-index: 3;
+}
+
+body.dark-mode #scrollToTop {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+#scrollToTop:hover {
+    background-color: var(--black); 
+}
+
+body.dark-mode #scrollToTop:hover {
+    background-color: var(--white); 
+}
 
 /*Register*/
 .noScroll {
@@ -794,8 +820,6 @@ body.dark-mode .highlightText2 {
 @media (max-width: 850px) {
     header {
         height: 65px;
-        z-index: 1;
-        backdrop-filter: blur(10px);
     }
     .mainIndex {
         position: absolute;
