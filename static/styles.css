@@ -608,17 +608,13 @@ body.dark-mode .headerApp {
     width: -webkit-fill-available;
 }
 
-.mainPhoto > div:last-child {
-    margin-bottom: 60px;
-}
-
 .photoContainer {
     margin-bottom: 15px;
 }
 
 .mainPhoto h1 {
     position: fixed;
-    top: 60px;
+    top: 59px;
     padding-bottom: 10px;
     z-index: 1;
     background-color: var(--white);
@@ -677,6 +673,45 @@ body.dark-mode .bookmark-icon {
 .bookmark-toggle:checked + .bookmark-icon::before {
     content: "\f02e"; 
     font-weight: 900; /* Solid weight */
+}
+
+.homeEnd {
+    height: 160px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.homeEnd i {
+    font-size: 3rem;
+    color: var(--purple);
+}
+
+body.dark-mode .homeEnd i {
+    color: var(--yellow);
+}
+
+.homeEnd h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--purple);
+}
+
+body.dark-mode .homeEnd h3 {
+    color: var(--yellow);
+}
+
+.homeEnd h4 {
+    font-weight: 100;
+}
+
+.highlightText2 {
+    color: var(--yellow);
+}
+
+body.dark-mode .highlightText2 {
+    color: var(--purple);
 }
 
 /*Media Queries*/
