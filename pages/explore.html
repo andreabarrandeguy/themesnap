@@ -18,8 +18,8 @@
         })();
     </script>
 </head>
-<body class="noScroll">
-    <header>
+<body>
+    <header class="headerApp">
         <nav>
             <a href="../index.html">
                 <img>
@@ -35,30 +35,13 @@
             
         </nav>
     </header>
-    <main class="mainNoPhoto">
-        <div>
-            <h2>Today's theme is</h2>
-            <h1 class="highlightText">Green</h1>
-        </div>
-        <div>
-            <p>You haven’t taken today’s theme photo.</p>
-            <p>Snap below!</p>
-        </div>
-        <form id="photoForm" action="home.html" enctype="multipart/form-data">
-            <input
-                id="upload"
-                type="file"
-                accept="image/*"
-                capture="environment"
-                required
-                onchange="this.form.submit();"
-            />
-            <label for="upload" class="shutter-button"></label>
-        </form>        
+    <main class="mainPhoto">
+            <h1>Explore</h1>
+
     </main>
     <footer>
-        <div><a class="fa-solid fa-house active"></a></div>
-        <div><a href="./explore.html" class="fa-solid fa-compass"></a></div>
+        <div><a href="./snap.html" class="fa-solid fa-house"></a></div>
+        <div><a class="fa-solid fa-compass active"></a></div>
         <div><a class="fa-solid fa-user"></a></div>
     </footer>
     <script src="../static/js.js"></script>

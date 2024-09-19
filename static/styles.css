@@ -578,6 +578,11 @@ body.dark-mode footer {
 footer a {
     font-size: 2rem;
     text-decoration: none;
+    color: var(--black);
+}
+
+body.dark-mode footer a {
+    color: var(--white);
 }
 
 .active {
@@ -704,6 +709,11 @@ body.dark-mode .homeEnd h3 {
 
 .homeEnd h4 {
     font-weight: 100;
+}
+
+.homeEnd a {
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .highlightText2 {
