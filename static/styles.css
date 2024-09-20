@@ -307,6 +307,16 @@ body.dark-mode .feature {
 }
 
 /*Gallery*/
+.divider2 .modeGallery {
+    fill: var(--yellow);
+    transition: fill 0.3s ease;
+}
+
+body.dark-mode .divider2 .modeGallery {
+    fill: var(--purple);
+    transition: fill 0.3s ease;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -465,6 +475,13 @@ body.dark-mode .formContainer {
 
 body.dark-mode .formContainer input:focus {
     border: 3px solid var(--yellow);
+}
+
+.forgotPassword {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
 /*Password toggle*/

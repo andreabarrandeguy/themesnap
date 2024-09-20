@@ -51,7 +51,6 @@ window.addEventListener('scroll', function () {
     if (featuresSection) {
         const featuresPosition = featuresSection.getBoundingClientRect().top;
 
-        // Show the button if the user has scrolled into the features section or lower
         if (window.scrollY > featuresSection.offsetTop) {
             scrollToTopButton.style.display = 'block';
         } else {
@@ -59,5 +58,11 @@ window.addEventListener('scroll', function () {
         }
     }
 });
+
+document.getElementById('scrollToTop').addEventListener('click', function (event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 
 
