@@ -323,6 +323,40 @@ body.dark-mode .feature {
     width: 100%;
   }
 
+  /* From Uiverse.io by adamgiebl */ 
+.card {
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    border-radius: 4px;
+    padding: 4px;
+    background-image: linear-gradient(144deg,var(--purple),var(--yellow));
+  }
+  
+  .card__content {
+    background: var(--white);
+    border-radius: 4px;
+    width: fit-content;
+    padding: 4px 8px;
+    color: white;
+    align-content: center;
+  }
+
+  body.dark-mode .card__content {
+    background: var(--black);
+    color: var(--white);
+  }
+
+  .card__content p {
+    color: var(--black);
+  }
+
+  body.dark-mode .card__content p {
+    color: var(--white);
+  }
+
+  
+
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
     .column {
@@ -723,7 +757,6 @@ body.dark-mode .mainPhoto h1 {
 
 .photo img {
     width: 100%;
-    display: block; 
 }
 
 .bookmark-toggle {
