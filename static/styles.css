@@ -932,15 +932,13 @@ body.dark-mode .highlightText2 {
 
 .sticky {
     position: sticky;
-    top: 118px; /* Align with the top */
+    top: 112px; /* Align with the top */
     background-color: var(--white); /* Background color */
     z-index: 1000; /* Ensure it’s on top */
-    transition: background-color 0.3s ease !important;
 }
 
 body.dark-mode .sticky {
     background-color: var(--black);
-    transition: background-color 0.3s ease !important;
 }
 
 .themeContainer {
@@ -951,7 +949,6 @@ body.dark-mode .sticky {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    height: 150px;
     width: 100vw; /* Full width of the viewport */
     max-width: 450px;
 }
