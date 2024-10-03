@@ -45,56 +45,6 @@ document.addEventListener('DOMContentLoaded', loadTheme);
 
 
 
-function registerLink(event) {
-    event.preventDefault(); // Prevent default link behavior
-    // Your logic here
-    window.location.href = '../pages/register.html';
-}
-
-function loginLink(event) {
-    event.preventDefault(); // Prevent default link behavior
-    // Your logic here
-    window.location.href = '../pages/login.html';
-}
-
-// Show modal or mobile view
-let isDesktop = false;
-
-// Event listener for mouse movement
-document.addEventListener('mousemove', function () {
-    if (!isDesktop) {
-        isDesktop = true;
-    }
-});
-
-// Button click event
-document.querySelectorAll('.landingText_buttons a').forEach(button => {
-    button.addEventListener('click', function (event) {
-        event.preventDefault();
-        if (isDesktop) {
-            // Handle click interaction: Show the modal
-            document.getElementById('mobileModal').style.display = 'flex';
-        } else {
-            // Handle tap interaction: Redirect to the appropriate URL
-            const targetUrl = button.id === 'registerBtn' ? registerUrl : loginUrl;
-            window.location.href = targetUrl;
-        }
-    });
-});
-
-// Close modal
-document.querySelector('.close').addEventListener('click', function () {
-    document.getElementById('mobileModal').style.display = 'none';
-});
-
-// Close modal when clicking outside of it
-window.addEventListener('click', function (event) {
-    const modal = document.getElementById('mobileModal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
-
 //"Go to top" button
 window.addEventListener('scroll', function () {
     const scrollToTopButton = document.getElementById('scrollToTop');
