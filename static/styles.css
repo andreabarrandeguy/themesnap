@@ -772,6 +772,7 @@ body.dark-mode .active {
     background-color: var(--white);
     transition: background-color 0.3s ease;
     max-width: 450px;
+    z-index: 2;
 }
 
 body.dark-mode .headerApp {
@@ -921,6 +922,11 @@ body.dark-mode .highlightText2 {
 .explore {
     padding-bottom: 45px;
 }
+
+.explore h1 {
+    z-index: 2;
+}
+
 .explore h2 {
     width: 100%;
     max-width: 440px;
@@ -934,7 +940,7 @@ body.dark-mode .highlightText2 {
     position: sticky;
     top: 112px; /* Align with the top */
     background-color: var(--white); /* Background color */
-    z-index: 1000; /* Ensure it’s on top */
+    z-index: 1; /* Ensure it’s on top */
 }
 
 body.dark-mode .sticky {
