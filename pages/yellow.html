@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="https://kit.fontawesome.com/858b52eeaa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <title>ThemeSnap</title>
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark-mode') {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+<body>
+    <div class="bodyApp">
+        <header class="headerApp">
+            <nav>
+                <a href="../index.html">
+                    <img>
+                </a>
+                <div>
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div class="toggle-switch">
+                        <input class="toggle-input" id="toggle" type="checkbox">
+                        <label class="toggle-label" for="toggle" id="toggle2"></label>
+                    </div>
+                    <i class="fa-regular fa-moon"></i>
+                </div>
+                
+            </nav>
+        </header>
+        <main class="mainPhoto explore">
+                <h1>Explore</h1>
+                <div class="themeContainer">
+                    <h2>Yellow</h2>
+                    <div class="image-grid">
+                        <img src="../img/landing/5.jpg" class="image">
+                        <img src="../img/landing/12.jpg" class="image">
+                        <img src="../img/landing/13.jpg" class="image">
+                    </div>
+                    <div class="image-grid">
+                        <img src="../img/landing/1.jpg" class="image">
+                        <img src="../img/landing/6.jpg" class="image">
+                        <div>
+                            <p>Explore more</p>
+                            <h2 class="highlightText2">Yellow</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="themeContainer">
+                    <h2>Nature</h2>
+                    <div class="image-grid">
+                        <img src="../img/landing/2.jpg" class="image">
+                        <img src="../img/landing/4.jpg" class="image">
+                        <img src="../img/landing/8.jpg" class="image">
+                    </div>
+                    <div class="image-grid">
+                        <img src="../img/landing/11.jpg" class="image">
+                    </div>
+                </div>
+
+                <div class="themeContainer">
+                    <h2>Dark</h2>
+                    <div class="image-grid">
+                        <img src="../img/landing/9.jpg" class="image">
+                        <img src="../img/landing/14.jpg" class="image">
+                        <img src="../img/landing/16.jpg" class="image">
+                    </div>
+                </div>
+
+                <div class="themeContainer">
+                    <h2>Water</h2>
+                    <div class="image-grid">
+                        <img src="../img/landing/3.jpg" class="image">
+                        <img src="../img/landing/7.jpg" class="image">
+                    </div>
+                </div>
+
+                <div class="themeContainer">
+                    <h2>Relax</h2>
+                    <div class="image-grid">
+                        <img src="../img/landing/10.jpg" class="image">
+                    </div>
+                </div>
+        </main>
+        <footer>
+            <div><a href="./snap.html" class="fa-solid fa-house"></a></div>
+            <div><a class="fa-solid fa-compass active"></a></div>
+            <div><a class="fa-solid fa-user"></a></div>
+        </footer>
+    </div>
+    <script src="../static/js.js"></script>
+</body>
+</html>

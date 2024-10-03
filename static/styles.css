@@ -132,6 +132,7 @@ body.dark-mode .highlightSection {
     color: var(--white);
     font-weight: 700;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .buttonprimary1:hover {
@@ -155,6 +156,7 @@ body.dark-mode .buttonprimary1:hover {
     color: var(--yellow);
     font-weight: 400;
     font-size: 1rem;
+    cursor: pointer;
 }
 
 .buttonsecondary:hover {
@@ -272,6 +274,55 @@ body.dark-mode .buttonsecondary:hover {
     border-radius: 8px;
 }
 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: fit-content; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: var(--shadow); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: var(--purple);
+    color: var(--white);
+    margin: 10% auto; /* Centered */
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+body.dark-mode .modal-content {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+.modal-content img {
+    border-radius: 8px;
+}
+
+.close {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    right: -146px;
+    top: -17px;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--black);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#qrCodeContainer {
+    margin: 10px 0px;
+}
+
 /*Features*/
 .features {
     flex-direction: column;
@@ -385,7 +436,7 @@ body.dark-mode .divider2 .modeGallery {
   
   #scrollToTop {
     position: fixed;
-    bottom: 20px;
+    bottom: 65px;
     right: 20px;
     background-color: var(--purple); 
     color: var(--white); 
@@ -537,6 +588,7 @@ body.dark-mode .formContainer input:focus {
     border: none;
     transition: background-color 0.3s ease;
     width: -webkit-fill-available;
+    cursor: pointer;
 }
 
 .buttonprimary2:hover {
@@ -863,6 +915,58 @@ body.dark-mode .homeEnd h3 {
 
 body.dark-mode .highlightText2 {
     color: var(--purple);
+}
+
+/*Explore*/
+.explore {
+    padding-bottom: 45px;
+}
+.explore h2 {
+    width: 100%;
+    max-width: 440px;
+    text-align: left;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    transition: top 0.3s; /* Smooth transition */
+}
+
+.sticky {
+    position: sticky;
+    top: 118px; /* Align with the top */
+    background-color: var(--white); /* Background color */
+    z-index: 1000; /* Ensure it’s on top */
+    transition: background-color 0.3s ease !important;
+}
+
+body.dark-mode .sticky {
+    background-color: var(--black);
+    transition: background-color 0.3s ease !important;
+}
+
+.themeContainer {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    height: 150px;
+    width: 100vw; /* Full width of the viewport */
+    max-width: 450px;
+}
+
+.image-grid div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    width: 100%; /* Take full width of the grid cell */
+    aspect-ratio: 1; /* Maintain a square aspect ratio */
+    object-fit: cover; /* Ensure images cover the area */
 }
 
 /*Media Queries*/
