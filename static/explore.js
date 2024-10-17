@@ -1,26 +1,26 @@
-const themeContainers = document.querySelectorAll('.themeContainer');
-const exploreTitle = document.querySelector('h1');
+// JavaScript for handling the pop-up functionality with touch events
+document.addEventListener('DOMContentLoaded', () => {
+    const snapThemeIcon = document.getElementById('snapTheme');
+    const explorePopup = document.getElementById('explorePopup');
+    const explorePopupText = document.querySelector('.explorePopup_text');
 
-window.addEventListener('scroll', () => {
-    themeContainers.forEach((container, index) => {
-        const h2 = container.querySelector('h2');
-        const themeRect = container.getBoundingClientRect();
-        const titleRect = exploreTitle.getBoundingClientRect();
+    // Function to show the pop-up
+    function showPopup() {
+        explorePopup.style.display = 'block';
+    }
 
-        // Check if the bottom of the title is above the top of the h2
-        if (titleRect.bottom >= themeRect.top && titleRect.bottom <= themeRect.bottom) {
-            h2.classList.add('sticky');
-        } else {
-            h2.classList.remove('sticky');
-        }
+    // Function to hide the pop-up
+    function hidePopup() {
+        explorePopup.style.display = 'none';
+    }
 
-        // Remove sticky class if the next container's top is in view
-        const nextContainer = themeContainers[index + 1];
-        if (nextContainer) {
-            const nextRect = nextContainer.getBoundingClientRect();
-            if (nextRect.top <= themeRect.bottom) {
-                h2.classList.remove('sticky');
-            }
+    // Event listener to show the pop-up when the icon is tapped
+    snapThemeIcon.addEventListener('touchstart', showPopup);
+
+    // Event listener to close the pop-up when tapping outside of "explorePopup_text"
+    document.addEventListener('touchstart', (event) => {
+        if (explorePopup.style.display === 'block' && !explorePopupText.contains(event.target) && event.target !== snapThemeIcon) {
+            hidePopup();
         }
     });
 });

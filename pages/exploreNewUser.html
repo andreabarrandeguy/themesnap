@@ -37,42 +37,8 @@
                 
             </nav>
         </header>
-        <main class="mainPhoto explore">
+        <main class="mainPhoto noExplore">
                 <div>
-                    <div class="themeContainer">
-                        <h2>Yellow</h2>
-                        <div class="image-grid">
-                            <img src="../img/landing/5.jpg" class="image">
-                            <img src="../img/landing/12.jpg" class="image">
-                            <img src="../img/landing/13.jpg" class="image">
-                            <img src="../img/landing/1.jpg" class="image">
-                            <img src="../img/landing/6.jpg" class="image">
-                            <div>
-                                <p>Explore more</p>
-                                <h3 class="highlightText2">Yellow</h3>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="themeContainer">
-                        <h2>Nature</h2>
-                        <div class="image-grid">
-                            <img src="../img/landing/2.jpg" class="image">
-                            <img src="../img/landing/4.jpg" class="image">
-                            <img src="../img/landing/8.jpg" class="image">
-                            <img src="../img/landing/11.jpg" class="image">
-                        </div>
-                    </div>
-
-                    <div class="themeContainer">
-                        <h2>Dark</h2>
-                        <div class="image-grid">
-                            <img src="../img/landing/9.jpg" class="image">
-                            <img src="../img/landing/14.jpg" class="image">
-                            <img src="../img/landing/16.jpg" class="image">
-                        </div>
-                    </div>
-
                     <div class="themeContainer">
                         <h2>Water</h2>
                         <div class="image-grid">
@@ -82,10 +48,46 @@
                     </div>
 
                     <div class="themeContainer">
-                        <h2>Relax</h2>
-                        <div class="image-grid">
-                            <img src="../img/landing/10.jpg" class="image">
+                        <h2>Yellow</h2>
+                        <div class="image-grid blur">
+                            <img src="../img/landing/5.jpg" class="image">
+                            <img src="../img/landing/12.jpg" class="image">
+                            <img src="../img/landing/13.jpg" class="image">
+                            <i id="snapTheme" class="fa-solid fa-lock highlightText2"></i>
                         </div>
+                    </div>
+
+                    <div class="themeContainer">
+                        <h2>Nature</h2>
+                        <div class="image-grid blur">
+                            <img src="../img/landing/2.jpg" class="image">
+                            <img src="../img/landing/4.jpg" class="image">
+                            <img src="../img/landing/8.jpg" class="image">
+                            <i class="fa-solid fa-eye highlightText2"></i>
+                        </div>
+                    </div>
+
+                    <div class="themeContainer">
+                        <h2>Dark</h2>
+                        <div class="image-grid blur">
+                            <img src="../img/landing/9.jpg" class="image">
+                            <img src="../img/landing/14.jpg" class="image">
+                            <img src="../img/landing/16.jpg" class="image">
+                        </div>
+                    </div>
+                </div>
+                <div id="explorePopup" class="explorePopup">
+                    <div class="explorePopup_text">
+                        <div>
+                            <p>To view the photos in</p>
+                            <h2 class="highlightText">Yellow</h2>
+                            <p>please snap a photo to participate</p>
+                        </div>
+                        <!-- Hidden form -->
+                        <form id="photoForm" action="explore.html" enctype="multipart/form-data">
+                            <input id="upload" type="file" accept="image/*" capture="environment" required onchange="this.form.submit();"/>
+                            <label for="upload" class="shutter-button"></label>
+                        </form>  
                     </div>
                 </div>
         </main>
