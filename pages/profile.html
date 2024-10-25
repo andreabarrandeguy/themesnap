@@ -25,7 +25,7 @@
                 <a href="../index.html">
                     <img>
                 </a>
-                <h1>Explore</h1>
+                <h1>username</h1>
                 <div>
                     <i class="fa-regular fa-lightbulb"></i>
                     <div class="toggle-switch">
@@ -37,40 +37,44 @@
                 
             </nav>
         </header>
-        <main class="mainPhoto noExplore">
+        <main class="mainPhoto explore">
+            <div class="userHeader">
                 <div>
-                    <div class="themeContainer">
-                        <h2>Yellow</h2>
-                        <div class="image-grid blur">
-                            <img src="../img/landing/5.jpg" class="image">
-                            <img src="../img/landing/12.jpg" class="image">
-                            <img src="../img/landing/13.jpg" class="image">
-                            <i id="snapTheme" class="fa-solid fa-eye highlightText2"></i>
-                        </div>
-                    </div>
+                    <a id="followers" class="buttonsecondary">Followers</a>
+                    <a id="following" class="buttonsecondary">Following</a>
                 </div>
-                <div id="explorePopup" class="explorePopup">
-                    <div class="explorePopup_text">
-                        <div>
-                            <p>To view the photos in</p>
-                            <h1 class="highlightText">Yellow</h1>
-                            <h2>please snap a photo to participate</h2>
-                        </div>
-                        <!-- Hidden form -->
-                        <form id="photoForm" action="explore.html" enctype="multipart/form-data">
-                            <input id="upload" type="file" accept="image/*" capture="environment" required onchange="this.form.submit();"/>
-                            <label for="upload" class="shutter-button"></label>
-                        </form>  
-                    </div>
+                <div id="bmkOthers">
+                    <p>17</p>
+                    <p>saves</p>
                 </div>
+            </div>
+            <div id="popup" class="popup popupprofile"></div>            
+            <div class="photoOfTheDay">
+                <img src="../img/landing/2.jpg">
+            </div>
+
+            <div class="image-grid">
+                <img src="../img/landing/5.jpg" class="image">
+                <img src="../img/landing/4.jpg" class="image">
+                <img src="../img/landing/14.jpg" class="image">
+                <img src="../img/landing/3.jpg" class="image">
+                <img src="../img/landing/10.jpg" class="image">
+                <img src="../img/landing/7.jpg" class="image">
+                <img src="../img/landing/5.jpg" class="image">
+                <img src="../img/landing/4.jpg" class="image">
+                <img src="../img/landing/14.jpg" class="image">
+                <img src="../img/landing/3.jpg" class="image">
+                <img src="../img/landing/10.jpg" class="image">
+                <img src="../img/landing/7.jpg" class="image">
+            </div>
         </main>
         <footer>
             <div><a href="./snap.html" class="fa-solid fa-house"></a></div>
-            <div><a class="fa-solid fa-compass active"></a></div>
-            <div><a href="./profile.html" class="fa-solid fa-user"></a></div>
+            <div><a href="./explore.html" class="fa-solid fa-compass"></a></div>
+            <div><a class="fa-solid fa-user active"></a></div>
         </footer>
     </div>
     <script src="../static/js.js"></script>
-    <script src="../static/explore.js"></script>
+    <script src="../static/profile.js"></script>
 </body>
 </html>
